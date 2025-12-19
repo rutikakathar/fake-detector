@@ -26,11 +26,11 @@ const Dashboard: React.FC = () => {
     let risk: Transaction['risk_level'] = 'low'
     let confidence = 0.7
 
-    if (t.amount > 2000 || hour < 5) {
+    if (t.amount > 50000 || hour < 5) {
       status = 'fake'
       risk = 'high'
       confidence = 0.95
-    } else if (t.amount > 500) {
+    } else if (t.amount > 15000) {
       status = 'suspicious'
       risk = 'medium'
       confidence = 0.85
